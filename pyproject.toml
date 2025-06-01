@@ -1,0 +1,16 @@
+[project]
+name = "dreamo"
+description = "[a/DreamO](https://github.com/bytedance/DreamO) ComfyUI native implementation."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["diffusers", "transformers", "sentencepiece", "einops", "protobuf", "git+https://github.com/ToTheBeginning/facexlib.git"]
+
+[project.urls]
+Repository = "https://github.com/ToTheBeginning/ComfyUI-DreamO"
+#  Used by Comfy Registry https://registry.comfy.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-DreamO"
+Icon = ""
+includes = []
