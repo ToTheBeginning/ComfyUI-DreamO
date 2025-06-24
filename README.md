@@ -3,11 +3,11 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2504.16915) [![demo](https://img.shields.io/badge/🤗-HuggingFace_Demo-orange)](https://huggingface.co/spaces/ByteDance/DreamO) <br>
 
-<img width="1468" alt="dreamo_workflow" src="https://github.com/user-attachments/assets/6d5d3df9-1442-4d81-9bc7-2afa37d621bf" />
+<img width="1485" alt="Image" src="https://github.com/user-attachments/assets/0954b0bf-63db-463f-ae25-9cd983b462db" />
 
 
-> [!Important]  
-> **2025.05.30** - This is a preview release. As we're not deeply familiar with ComfyUI, the implementation may not be optimal and could differ from the original Diffusers version. Contributions from ComfyUI experts to refine the code are welcome.
+> [!DreamO-v1.1]  
+> **2025.06.24** - We are excited to release DreamO v1.1 with significant improvements in image quality, reduced likelihood of body composition errors, and enhanced aesthetics. [Learn more about this model](https://github.com/bytedance/DreamO/blob/main/dreamo_v1.1.md)
 
 
 ## Install
@@ -30,12 +30,13 @@ If your machine already has FLUX models downloaded, you can skip this.
 
 ### DreamO models
 - Download all files ending with `.safetensors` in https://huggingface.co/ByteDance/DreamO/tree/main/comfyui => `ComfyUI/models/loras`.
+- 🔥🔥**v1.1**: Download all files ending with `.safetensors` in https://huggingface.co/ByteDance/DreamO/tree/main/v1.1 => `ComfyUI/models/loras`.
 - (Support auto-download) Download [dreamo-embedding](https://huggingface.co/ByteDance/DreamO/blob/main/embedding.safetensors) => `ComfyUI/models/dreamo`
 - (Support auto-download) Download [ben2](https://huggingface.co/PramaLLC/BEN2/blob/main/model.safetensors) => `ComfyUI/models/dreamo`
 - Download [flux-turbo](https://huggingface.co/alimama-creative/FLUX.1-Turbo-Alpha/blob/main/diffusion_pytorch_model.safetensors) => `ComfyUI/models/loras`, and rename it to `flux-turbo.safetensors`
 
 ## Workflows
-We provide two simple workflows in the [workflows](workflows) folder: [one](workflows/dreamo_comfyui.json) for single-condition input and [another](workflows/dreamo_comfyui_2cond.json) for multi-condition input. You can refer to https://github.com/bytedance/DreamO?tab=readme-ov-file#supported-tasks to learn more about the tasks supported by DreamO and the expected prompt format.
+Please fine the workflows in [workflows](workflows) folder, [this v1.1 workflow](workflows/dreamo_comfyui_v1.1.json) is the latest version.
 
 
 ## Nodes
@@ -60,7 +61,7 @@ Contributions are welcome!
 The implementation of the ComfyUI plugin refers to [ComfyUI_PuLID_Flux_ll](https://github.com/lldacing/ComfyUI_PuLID_Flux_ll).
 
 ## Future Plans
-Please follow our base repository [DreamO](https://github.com/bytedance/DreamO) — we will be releasing an update to the model in the coming weeks.
+✅ Please follow our base repository [DreamO](https://github.com/bytedance/DreamO) — we will be releasing an update to the model in the coming weeks.
 
 
 ## :e-mail: Contact

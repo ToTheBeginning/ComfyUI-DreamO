@@ -122,6 +122,8 @@ class DreamORefEncode:
             "pixels": ("IMAGE", ),
             "vae": ("VAE", ),
             "dreamo_processor": ("DREAMO_PROCESSOR", ),
+            "resolution": ("INT", {"default": 512, "min": 512, "max": 1024, "step": 16,
+                              "tooltip": "The resolution of the reference image."}),
             "ref_task": (
                 ["ip","id","style"],
                 {
@@ -137,7 +139,7 @@ class DreamORefEncode:
 
     CATEGORY = "dreamo"
 
-    def encode(self, pixels, vae, dreamo_processor, ref_task):
+    def encode(self, pixels, vae, dreamo_processor, resolution, ref_task):
         device = comfy.model_management.get_torch_device()
         offload_device = comfy.model_management.unet_offload_device()
 
@@ -187,7 +189,7 @@ class DreamORefEncode:
             image = dreamo_processor["ben2"].inference(Image.fromarray(image))
             dreamo_processor["ben2"].to(offload_device)
         if ref_task != 'id':
-            image = resize_numpy_image_area(np.array(image), area=512*512)
+            image = resize_numpy_image_area(np.array(image), area=resolution*resolution)
 
         image = image_to_tensor(image, bgr2rgb=False).unsqueeze(0) # b h w c
         latent = vae.encode(image[:,:,:,:3])
