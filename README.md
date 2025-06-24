@@ -6,8 +6,8 @@
 <img width="1485" alt="Image" src="https://github.com/user-attachments/assets/0954b0bf-63db-463f-ae25-9cd983b462db" />
 
 
-> [!DreamO-v1.1]  
-> **2025.06.24** - We are excited to release DreamO v1.1 with significant improvements in image quality, reduced likelihood of body composition errors, and enhanced aesthetics. [Learn more about this model](https://github.com/bytedance/DreamO/blob/main/dreamo_v1.1.md)
+> [!Important]  
+> **2025.06.24** - We are excited to release **DreamO v1.1** with significant improvements in image quality, reduced likelihood of body composition errors, and enhanced aesthetics. [Learn more about this model](https://github.com/bytedance/DreamO/blob/main/dreamo_v1.1.md)
 
 
 ## Install
