@@ -38,6 +38,8 @@ If your machine already has FLUX models downloaded, you can skip this.
 ## Workflows
 Please fine the workflows in [workflows](workflows) folder, [this v1.1 workflow](workflows/dreamo_comfyui_v1.1.json) is the latest version.
 
+The v1.1 model, when combined with the [Super-Realism LoRA](https://huggingface.co/strangerzonehf/Flux-Super-Realism-LoRA), can further enhance realism. However, since it's a realism-focused LoRA, it may affect style transfer. Use it as needed.
+
 
 ## Nodes
 - DreamOProcessorLoader
